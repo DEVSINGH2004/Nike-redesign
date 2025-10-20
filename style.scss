@@ -1,0 +1,238 @@
+@font-face {
+    font-family: nike ;
+    src: url(./Nike-Futura.woff2);
+}
+
+@font-face {
+    font-family: hel-med ;
+    src: url(./HelveticaNowDisplayMedium.woff2);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+
+@mixin displayflex($gap){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap;
+}
+
+@mixin bgset($pos){
+    background-position: $pos;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+
+    grid-template-areas: "header header header"
+                          "section section section"
+                          "div1 div2 div3"
+    ;
+
+    
+
+    header{
+        background-color: white;
+        grid-area: header;
+        padding: 20px;
+        @include displayflex(0px);
+
+        .part1{
+            width: 10%;
+           
+            
+            img{
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                
+            }
+        }
+
+        .part2{
+            @include displayflex(90px);
+            a{
+                text-decoration: none;
+                color:black;
+                font-family: hel-med;
+                font-size: 18px;
+            }
+
+            a:hover{
+                text-decoration: underline;
+                transition: all ease 1s;
+                
+            }
+        }
+
+        .part3{
+            @include displayflex(15px);
+            .icon{
+                font-size: 25px;
+                border-radius: 50%;
+                padding: 5px;
+            }
+
+            .icon:hover{
+                background-color: rgb(66, 63, 63);
+                color: white;
+                
+                transition: all ease 0.5s;
+            }
+        }
+
+    }
+
+    section{
+        background-color: rgb(196, 189, 189);
+        grid-area: section;
+        @include displayflex(0px);
+        justify-content: center;
+        h1{
+            font-size: 200px;
+            font-family: nike;
+        }
+
+        h1:hover{
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+            transition: all ease 0.3s;
+        }
+
+        
+    }
+
+    section:hover{
+            background-color: black;
+            color: white;
+            transition: all ease 0.5s;
+        }
+
+    #div1{
+        
+        grid-area: div1;
+        background-image:url(./pro1.avif);
+        @include bgset(top);
+        .container{
+            height: 100%;
+            width:100%;
+            background: transparent;
+            @include displayflex(0px);
+            justify-content: center;
+            h2{
+            font-size: 50px;
+            color: rgb(227, 227, 90);
+            opacity: 0;
+            
+        }
+
+        
+        }
+
+        .container:hover{
+            backdrop-filter: blur(5px);
+             transition: all ease 0.5s;
+            h2{
+                opacity: 1;
+                transition: all ease 0.5s;
+            }
+
+           
+        }
+        
+
+    }
+
+    #div2{
+        
+        grid-area: div2;
+        background-image:url(./pro2.avif);
+        @include bgset(top);
+        .container{
+            height: 100%;
+            width:100%;
+            background: transparent;
+            @include displayflex(0px);
+            justify-content: center;
+            h2{
+            font-size: 50px;
+            color: rgb(227, 227, 90);
+            opacity: 0;
+            
+        }
+
+        
+        }
+
+        .container:hover{
+            backdrop-filter: blur(5px);
+             transition: all ease 0.5s;
+            h2{
+                opacity: 1;
+                transition: all ease 0.5s;
+            }
+
+           
+        }
+        
+
+    }
+
+    #div3{
+        
+        grid-area: div3;
+        background-image:url(./pro3.avif);
+        @include bgset(top);
+        .container{
+            height: 100%;
+            width:100%;
+            background: transparent;
+            @include displayflex(0px);
+            justify-content: center;
+            h2{
+            font-size: 50px;
+            color: rgb(227, 227, 90);
+            opacity: 0;
+            
+        }
+
+        
+        }
+
+        .container:hover{
+            backdrop-filter: blur(5px);
+             transition: all ease 0.5s;
+            h2{
+                opacity: 1;
+                transition: all ease 0.5s;
+            }
+
+           
+        }
+        
+
+    }
+
+    
+
+    
+}
+
